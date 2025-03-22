@@ -1,0 +1,73 @@
+# Query: localhost
+# ContextLines: 1
+
+15 results - 9 files
+
+backend\my-api\index.js:
+  30  app.listen(PORT, () => {
+  31:   console.log(`Server is running on http://192.168.254.100:${PORT}`);
+  32  });
+
+NagaMed-2.0\app\Appointment.tsx:
+   28  
+   29:         const response = await fetch(`http://192.168.254.100:8080/api/user?account_id=${userId}`);
+   30          const data = await response.json();
+
+   41  
+   42:         const response = await fetch(`http://192.168.254.100:8080/api/appointments?patient_id=${userId}`);
+   43          const data = await response.json();
+
+   66      try {
+   67:       const response = await fetch(`http://192.168.254.100:8080/api/appointments/${appointmentId}`, {
+   68          method: 'PUT',
+
+  100      try {
+  101:       const response = await fetch(`http://192.168.254.100:8080/api/appointments/${appointmentId}`, {
+  102          method: 'DELETE'
+
+NagaMed-2.0\app\Clinics.tsx:
+  7    useEffect(() => {
+  8:     fetch("http://192.168.254.100:8080/api/clinics")
+  9        .then((response) => response.json())
+
+NagaMed-2.0\app\CreateAccount.tsx:
+  45      try {
+  46:       const response = await fetch("http://192.168.254.100:8080/register", {
+  47          method: "POST",
+
+NagaMed-2.0\app\CreateAppointment.tsx:
+  38      try {
+  39:       const response = await fetch("http://192.168.254.100:8080/api/clinics");
+  40        const data = await response.json();
+
+  57      try {
+  58:       const response = await fetch(`http://192.168.254.100:8080/api/clinics/${clinicId}/doctors`);
+  59        const data = await response.json();
+
+  94    
+  95:       const response = await fetch("http://192.168.254.100:8080/api/appointments", {
+  96          method: "POST",
+
+NagaMed-2.0\app\Doctors.tsx:
+  16      try {
+  17:       const response = await fetch(`http://192.168.254.100:8080/api/clinics/${clinicId}/doctors`);
+  18        const data = await response.json();
+
+NagaMed-2.0\app\ForgotPassword.tsx:
+  25      try {
+  26:       const response = await fetch("http://192.168.254.100:8080/forgot-password", { // 🔹 Replace with actual API endpoint
+  27          method: "POST",
+
+NagaMed-2.0\app\Home.tsx:
+  18  
+  19:         const response = await fetch(`http://192.168.254.100:8080/api/user?account_id=${userId}`);
+  20          const data = await response.json();
+
+  32  
+  33:         const response = await fetch(`http://192.168.254.100:8080/api/appointments?patient_id=${userId}`);
+  34          const data = await response.json();
+
+NagaMed-2.0\app\Signin.tsx:
+  26      try {
+  27:       const response = await fetch("http://192.168.254.100:8080/login", {
+  28          method: "POST",
